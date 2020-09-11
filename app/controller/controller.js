@@ -1,14 +1,13 @@
 'use strict';
-
 var LineGraph = require('../model/linegraph-model.js');
 var LineGraph_Data = require('../model/linegraph-data-model.js');
-
+//Exposes objects using exports object
 exports.read_a_graph = () => {  
-    LineGraph_Data.readSpecifiedPoints(req.params.graphId, req.params.userId, (err, task) => {
+    LineGraph_Data.readSpecifiedPoints(req.params.graphId, req.params.userId, (err, points) => {
         if (err){
             res.send(err);
         }
-        res.json(task);
+        res.json(points);
     });
 };
 exports.create_a_point = (req, res) => {
