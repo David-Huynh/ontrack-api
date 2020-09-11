@@ -2,7 +2,7 @@
 const express = require('express'),
   //bodyParser = require('body-parser'),
   app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 
 const mysql = require('mysql');
@@ -29,5 +29,5 @@ app.listen(port, ()=>{
 
 //app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(bodyParser.json());
-var routes = require('./app/routes/routes');
+var routes = require('./app/routes/routes.js');
 routes(app);
