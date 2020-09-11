@@ -14,7 +14,7 @@ connection.connect(function(err){
         return console.log('ERROR:' + err.message);
     }
     
-    console.log('Connected to MySQL server.');
+    console.log('(Secondary)Connected to MySQL server.');
 });
 
 

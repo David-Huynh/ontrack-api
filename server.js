@@ -19,7 +19,7 @@ mc.connect(function(err){
         return console.log('ERROR:' + err.message);
     }
     
-    console.log('Connected to MySQL server.');
+    console.log('(Main)Connected to MySQL server.');
 });
 
 app.listen(port, ()=>{

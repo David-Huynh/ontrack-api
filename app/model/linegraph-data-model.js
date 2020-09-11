@@ -1,5 +1,5 @@
 'user strict';
-var sql = require('./db.js');
+var sql = require('./connect-to-db.js');
 /*
     Defining model for how linegraph data is to be handled
 */
