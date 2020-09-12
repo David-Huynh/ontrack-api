@@ -21,7 +21,7 @@ Linegraph_data.createPoint = (graphId, userId, amount, dateEntered, result) => {
 };
 //Handles request to read data points
 Linegraph_data.readSpecifiedPoints = (graphId, userId, result) => {
-    sql.query("SELECT amount FROM linegraph_data WHERE graph_Id = ? AND userId = ?", [graphId, userId], (err, res) => {
+    sql.query("SELECT amount FROM linegraph_data WHERE graph_Id = ? AND user_Id = ?", [graphId, userId], (err, res) => {
         if (err){
             console.log("ERROR:", err);
             result(err, null);
